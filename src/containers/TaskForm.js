@@ -4,7 +4,6 @@ import { createTask } from '../actions';
 
 let TaskForm = ({ dispatch }) => {
   let input;
-  // console.log('onSubmit: ' + onSubmit + ' : ' + onSubmit.toSource);
   return (
     <form className="taskForm" onSubmit={e => {
       e.preventDefault()
