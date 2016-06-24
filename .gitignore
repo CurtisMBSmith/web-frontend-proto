@@ -34,3 +34,9 @@ node_modules
 
 # Output directory
 dist/
+
+# Computed stats
+stats.json
+
+# Workspace config
+web-frontend-proto.sublime-workspace

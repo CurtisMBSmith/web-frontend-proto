@@ -1,0 +1,4 @@
+
+export const CREATE_TASK = 'CREATE_TASK';
+export const TOGGLE_COMPLETE = 'TOGGLE_COMPLETE';
+export const UPDATE_TASK_DESC = 'UPDATE_TASK_DESC';
