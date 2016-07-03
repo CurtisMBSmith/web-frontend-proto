@@ -1,10 +1,9 @@
 import { combineReducers } from 'redux';
-// import { login, logout } from './Login';
+import { auth } from './Login';
 import taskList from './Task';
 
 const app = combineReducers({
-  // login,
-  // logout,
+  auth,
   taskList
 });
 

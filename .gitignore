@@ -39,4 +39,5 @@ dist/
 stats.json
 
 # Workspace config
-web-frontend-proto.sublime-workspace
+*.sublime-workspace
+*.sublime-project
