@@ -14,7 +14,7 @@ export default class Task extends Component {
     let desc, complete;
     return (
       <div className="task" >
-          <input type="text" value={this.props.description} style={{ textDecoration: this.props.completed ? 'line-through' : 'none' }}
+          <input type="text" value={this.props.description} className="taskDesc" style={{ textDecoration: this.props.completed ? 'line-through' : 'none' }}
               ref={node => desc = node} onChange={e => {
                 e.preventDefault();
                 if (desc.value !== this.props.description) {

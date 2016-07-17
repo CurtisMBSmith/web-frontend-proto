@@ -1,11 +1,13 @@
 require('es6-promise').polyfill();
 var webpack = require('webpack');
 var CleanPlugin = require('clean-webpack-plugin');
-var ExtractPlugin = require('extract-text-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var production = process.env.NODE_ENV === 'production';
+var path = require('path');
+var autoprefixer = require('autoprefixer');
 
 var plugins = [
-  new ExtractPlugin('app.bundle.css'),
+  new ExtractTextPlugin('app.bundle.css'),
   new webpack.optimize.CommonsChunkPlugin({
     name:       'main',
     children:   true,
@@ -38,6 +40,10 @@ if (production) {
   ]);
 }
 
+const sassLoaders = [
+  'css', 'sass'
+];
+
 module.exports = {
   debug:  !production,
   devtool: production ? false : 'eval',
@@ -49,6 +55,11 @@ module.exports = {
     publicPath:     'dist/',
   },
   plugins: plugins,
+  postcss: [
+    autoprefixer({
+      browser: ['last 2 versions']
+    })
+  ],
   module: {
     preLoaders: [
       {
@@ -68,7 +79,7 @@ module.exports = {
       },
       {
         test:     /\.scss/,
-        loader:  ExtractPlugin.extract('style', 'css!sass'),
+        loader:  ExtractTextPlugin.extract('style', sassLoaders.join('!')),
       },
       {
         test:     /\.html/,
