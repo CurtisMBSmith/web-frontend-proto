@@ -7,9 +7,11 @@ A project for prototyping frontend components using webpack for building and web
 * Redux
 * Webpack
 * Webpack-Dev-Server
+
 ## Getting Started
 ### Pre-requisities
 * Node.js
+
 ### Installing and running
 1. Clone the repository.
 2. Run `npm install`.
