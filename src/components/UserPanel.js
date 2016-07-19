@@ -10,7 +10,10 @@ export default class UserPanel extends Component {
     return (
       <div className="userPanel" >
         <p>Welcome {this.props.email}!</p>
-        <a href="#" onClick={() => this.props.onLogOut(this.props.authToken)}>Logout</a>
+        <a href="#" onClick={(e) => {
+          this.props.onLogOut(this.props.authToken);
+          e.preventDefault();
+        }}>Logout</a>
       </div>
     )
   }

@@ -1,5 +1,8 @@
 $bg-colour: #3DDBCC;
-$sidebar-colour: #12544E;
+$sidebar-colour-base: #12544E;
+$sidebar-colour: lighten($sidebar-colour-base, 15%);
+$sidebar-text-colour: #fbd888;
+$sidebar-item-hover-colour: darken($sidebar-colour, 7%);
 
 html {
   box-sizing: border-box;
@@ -16,7 +19,7 @@ html, body {
 
 body {
   font-family: sans-serif;
-  background: url(../../img/bg_content.png) repeat left top;
+  background: lighten($bg-colour, 40%);
   margin: 0 auto;
 }
 
@@ -50,7 +53,9 @@ div {
   height: 100%;
   margin: 0;
   float: left;
-  background: url(../../img/bg_sidebar.png) repeat left top;
+  background: $sidebar-colour;
+  list-style: none;
+  padding-left: 0px;
 }
 
 .sideBar ul {
@@ -63,12 +68,22 @@ div {
 
 .sideBar li {
   width: 100%;
-  padding-top: 20%;
+  text-align: center;
+
+  border-bottom: #000000;
+  border-bottom-style: double;
+}
+
+.sideBar li:hover {
+  background: $sidebar-item-hover-colour;
 }
 
 .sideBar a {
   display: block;
+  text-decoration: none;
+  color: $sidebar-text-colour;
   font-size: 2em;
+  padding: 15% 0;
 }
 
 .taskDesc {

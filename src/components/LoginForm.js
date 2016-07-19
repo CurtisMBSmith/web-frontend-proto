@@ -19,6 +19,7 @@ export default class LoginForm extends Component {
           return;
         }
         this.props.onLogIn("authToken", email.value);
+        e.preventDefault();
       }}>Log In</button>
         <button type="button" >Forgot Password?</button>
 
