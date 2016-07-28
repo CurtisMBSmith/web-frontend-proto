@@ -6,7 +6,7 @@ const SideBar = () => (
     <ul className="sideBar" >
       <li><Link to="/tasks">TaskBox</Link></li>
       <li><Link to="/auth">LoginForm</Link></li>
-      <p></p>
+      <li><Link to="/tags">Tags</Link></li>
     </ul>
   </nav>
 );

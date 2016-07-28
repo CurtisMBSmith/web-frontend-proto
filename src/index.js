@@ -8,6 +8,7 @@ import { Router, Route, hashHistory } from 'react-router';
 import MainApp from './pages/MainApp';
 import TaskApp from './pages/TaskApp';
 import UserApp from './pages/UserApp';
+import TagApp from './pages/TagApp';
 import app from './reducers';
 
 let store = createStore(app);
@@ -18,6 +19,7 @@ render(
       <Route path="/" component={MainApp} />
       <Route path="/tasks" component={TaskApp} />
       <Route path="/auth" component={UserApp} />
+      <Route path="/tags" component={TagApp} />
     </Router>
   </Provider>,
   document.getElementById('content')
