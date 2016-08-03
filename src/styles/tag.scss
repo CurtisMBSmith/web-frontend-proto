@@ -1,0 +1,11 @@
+$tag-bg: lighten(red, 15%);
+
+.tag {
+  background-color: $tag-bg;
+  overflow: hidden;
+  width: 15%;
+  border: 1px black solid;
+  border-radius: 15px;
+  text-align: center;
+}
+

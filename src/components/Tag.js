@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import '../styles/tag.scss';
 
 export default class Tag extends Component {
 
@@ -13,9 +14,7 @@ export default class Tag extends Component {
   render() {
     return (
       <div className="tag" >
-        <p className="name" >
-          { this.props.name }
-        </p>
+        <p>{ this.props.name }</p>
       </div>
     )
   }
